@@ -1,0 +1,164 @@
+@import "variables";
+@import "mixin";
+@import "reset";
+@import "font";
+@import "font-awesome";
+@import "layout";
+@import "form";
+@import "blocksets";
+@import "media";
+
+html {
+    font-size: @base-font-size;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+	color: @global-gray;
+	font: normal @base-font-size @global-font; /*1em equal 16px*/
+	@include box-sizing(border-box);
+	background: #f5f5f5;
+}
+
+hr {
+  border: none;
+  border-bottom: solid 1px @global-gray;
+}
+
+a{
+	color: @global-gray;
+	text-decoration: none;
+	&:hover, &:focus{
+		color: @global-green-hover;
+		text-decoration: underline;
+		outline: none;
+		}
+	}
+
+p{
+	margin-bottom:15px;
+	}
+
+h1 {
+  font-size: em(45);
+  font-family: @global-font;
+}
+
+h2 {
+  font: 200 25px @global-font;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+h3 {
+  font: 200 em(18) @global-font;
+}
+
+h4 {
+  font: 500 1em @global-font;
+}
+
+h5 {
+  font: 900 0.8em @global-font;
+}
+
+h6 {
+  font: 900 0.6em @global-font;
+  text-transform: uppercase;
+}
+
+.after-pseudo {
+  content: "";
+  overflow: hidden;
+  @extend .dis-block, .clearall;
+}
+
+.dis-block {
+  display: @block;
+}
+
+.roundedborder {
+  @include border-radius (4px);
+}
+
+.float-left{
+	float: @left;
+}
+.float-right{
+	float: @right;
+}
+
+.padding{
+	padding: 20px 0;
+}
+
+/*Login Box*/
+.home {
+	padding-top:em(30);
+	}
+header.logo{
+	margin: 0 0 30px 0;
+		h1{
+			width: em(230);
+			height:65px;
+			line-height:65px;
+			margin:0 auto;
+			background:url(../images/logo-leapfrog-technology.png) no-repeat center;
+			a{
+				max-width: 100%;
+				line-height:65px;
+				@extend .dis-block;
+				text-indent: -9999px;
+				font-size:0px;
+				}
+		}
+	}
+.login-box{
+	width: em(400);
+	padding: em(40);
+	margin:0 auto;
+	background: @global-white;
+	border: 1px #dddddd solid;
+	/*box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);*/
+	h1{
+		text-transform:uppercase;
+		font-size:1em;
+		text-align:center;
+		margin-bottom:15px;
+		}
+		p{
+			position: relative;
+			margin-bottom:20px;
+			@extend .after-pseudo;
+			&:last-child{
+				margin: 0px;
+			}
+			label.fa{
+				text-indent: -9999px;
+				position: absolute;
+				cursor: pointer;
+				&:before{
+					position: absolute;
+					left: 10px;
+					top: 13px;
+					width: 30px;
+					font-size: 1em;
+					text-indent: 0;
+					color: @lightgray;
+				}
+			}
+		}
+		.note{
+			font-size: em(14);
+			color: @global-gray;
+			border-top: 1px #e5e5e5 solid;
+			padding-top: 15px;
+			margin-top: 15px;
+			overflow:hidden
+			}
+	}

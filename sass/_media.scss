@@ -1,0 +1,28 @@
+@media only screen and (max-width: 600px){
+	.main-container {
+		max-width: 95%;
+		margin: 0 auto;
+	}
+	header.logo{
+		h1{
+			width: 85%;
+		}
+	}
+	.login-box{
+		width: 90%;
+		padding: em(15);
+	}
+	.note{ text-align: center;}
+	.action-text{
+		text-align:center;
+		.pull-left,.pull-right{
+			float: none;
+			width: 100%;
+			display: block;
+		}
+		
+		.pull-left{
+			margin-bottom: em(10);
+			}
+	}
+}
