@@ -3059,28 +3059,14 @@ footer {
 
 /*Login Box*/
 .home {
-  padding-top: 0px;
-  /*text-align: center;
-  height: 100%;
-  	&:before {
-  		content: '';
-  		display: inline-block;
-  		height: 100%; 
-  		vertical-align: middle;
-  		margin-right: -40px;
-  	 }
-  	 .main{
-  			display: inline-block;
-  			vertical-align: middle;
-  			padding: 0;
-  		  }*/
+  padding: 0px;
 }
 
 .logo {
   margin: 30px 0;
 }
 .logo h1 {
-  width: 230px;
+  width: 23%;
   height: 65px;
   line-height: 65px;
   margin: 0 auto;
@@ -3101,7 +3087,7 @@ footer {
 }
 
 .login-box {
-  width: 400px;
+  max-width: 400px;
   padding: 40px;
   margin: 0 auto;
   background: white;
@@ -3162,28 +3148,9 @@ footer {
   left: 0;
 }
 
-@media only screen and (max-width: 600px) {
-  .main-container {
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
+@media only screen and (max-width: 320px) {
   .login-box {
-    padding: 20px;
-  }
-
-  .note {
-    text-align: center;
-  }
-
-  .action-text {
-    text-align: center;
-  }
-  .action-text .pull-left, .action-text .pull-right {
-    display: inline-block;
-  }
-  .action-text .pull-left {
-    margin-bottom: 10px;
+    max-width: 280px;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -3207,8 +3174,8 @@ footer {
     width: 75px;
   }
 }
-@media only screen and (max-width: 320px) {
-  .login-box {
-    max-width: 280px;
+@media only screen and (max-width: 992px) {
+  .logo h1 {
+    width: 230px;
   }
 }
