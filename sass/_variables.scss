@@ -19,16 +19,16 @@ $base-font-size: 16px;
 $block: block;
 
 /* Width Variables */
-$width-default:100%;
+$width-default: 100%;
 $width-wrapper: 1000px;
 
-$left-width: (300/1130)*100%;
-$main-width: (810/1130)*100%;
-$right-width: (300/1130)*100%;
+$left-width: (300/1000)*100%;
+$main-width: (700/1000)*100%;
+$right-width: (300/1000)*100%;
 
-$col-left: (300/810)*100%;
-$col-main: (490/810)*100%;
-$col-right: (300/810)*100%;
+$col-left: (300/700)*100%;
+$col-main: (400/700)*100%;
+$col-right: (300/700)*100%;
 
 /* BREAKPOINTS */
 $bp-large: 60em;

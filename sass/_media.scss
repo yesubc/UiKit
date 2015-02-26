@@ -1,12 +1,16 @@
-@media only screen and (max-width : 320px) {
-	.login-box{
-		max-width: 280px;
+@media only screen and (max-width : 992px) {
+	.logo{
+		h1{
+			width: 230px;
+		}
 	}
 }
+
 
  @media only screen and (max-width : 480px) {
 	.login-box{
 		max-width: 300px;
+		padding: 20px;
 	}
 	.logo{
 		margin: 15px 0;
@@ -16,9 +20,14 @@
 		}
 	}
 	.action-text{
+		text-align:center;
 		.pull-left,.pull-right{
 			float: none;
 		}
+		.pull-left{
+			margin-bottom:15px;
+			display:block;
+			}
 	}
 	.or-option {
 		&:after, 
@@ -29,13 +38,8 @@
 }
 
 
-@media only screen and (max-width : 992px) {
-	.logo{
-		h1{
-			width: 230px;
-		}
+@media only screen and (max-width : 320px) {
+	.login-box{
+		max-width: 280px;
 	}
 }
-
-
-

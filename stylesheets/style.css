@@ -2730,6 +2730,40 @@ button {
   max-width: 100%;
 }
 
+.width-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.left-width, .col2-left-layout .col-left, .col2-left-layout .col3-right-layout .main .col-left, .col3-right-layout .main .col2-left-layout .col-left, .col2-left-layout .col3-l-left-layout .main .col-l-left, .col3-l-left-layout .main .col2-left-layout .col-l-left, .col3-left-layout .col-left, .col3-left-layout .col3-right-layout .main .col-left, .col3-right-layout .main .col3-left-layout .col-left, .col3-left-layout .col3-l-left-layout .main .col-l-left, .col3-l-left-layout .main .col3-left-layout .col-l-left, .col3-l-left-layout .col-left, .col3-l-left-layout .col3-right-layout .main .col-left, .col3-right-layout .main .col3-l-left-layout .col-left, .col3-l-left-layout .main .col-l-left {
+  width: 30%;
+}
+
+.main-width, .col3-left-layout .main, .col3-right-layout .main, .col3-l-left-layout .main, .col3-r-right-layout .main {
+  width: 70%;
+}
+
+.right-width, .col3-right-layout .col-right, .col3-right-layout .col3-left-layout .main .col-right, .col3-left-layout .main .col3-right-layout .col-right, .col3-right-layout .col3-r-right-layout .main .col-r-right, .col3-r-right-layout .main .col3-right-layout .col-r-right, .col3-r-right-layout .col-right, .col3-r-right-layout .col3-left-layout .main .col-right, .col3-left-layout .main .col3-r-right-layout .col-right, .col3-r-right-layout .main .col-r-right {
+  width: 30%;
+}
+
+/* INNER COL WIDTH*/
+.col-left, .col3-right-layout .main .col-left, .col3-l-left-layout .main .col-l-left {
+  width: 42.85714%;
+}
+
+.col-main, .col3-left-layout .main .col-main, .col3-right-layout .main .col-main, .col3-l-left-layout .main .col-main, .col3-r-right-layout .main .col-main {
+  width: 57.14286%;
+}
+
+.col-right, .col3-left-layout .main .col-right, .col3-r-right-layout .main .col-r-right {
+  width: 42.85714%;
+}
+
+.content {
+  padding: 15px;
+}
+
 /* COL ONE LAYOUT */
 .col1-layout {
   width: 100%;
@@ -2746,7 +2780,7 @@ button {
   width: 100%;
 }
 .col2-left-layout .main {
-  width: 71.68142%;
+  width: 70%;
 }
 .col2-left-layout .main .col-main, .col2-left-layout .col3-left-layout .main .col-main, .col3-left-layout .col2-left-layout .main .col-main, .col2-left-layout .col3-right-layout .main .col-main, .col3-right-layout .col2-left-layout .main .col-main, .col2-left-layout .col3-l-left-layout .main .col-main, .col3-l-left-layout .col2-left-layout .main .col-main, .col2-left-layout .col3-r-right-layout .main .col-main, .col3-r-right-layout .col2-left-layout .main .col-main {
   width: 100%;
@@ -2757,13 +2791,13 @@ button {
   width: 100%;
 }
 .col2-right-layout .main {
-  width: 71.68142%;
+  width: 70%;
 }
 .col2-right-layout .main .col-main, .col2-right-layout .col3-left-layout .main .col-main, .col3-left-layout .col2-right-layout .main .col-main, .col2-right-layout .col3-right-layout .main .col-main, .col3-right-layout .col2-right-layout .main .col-main, .col2-right-layout .col3-l-left-layout .main .col-main, .col3-l-left-layout .col2-right-layout .main .col-main, .col2-right-layout .col3-r-right-layout .main .col-main, .col3-r-right-layout .col2-right-layout .main .col-main {
   width: 100%;
 }
 .col2-right-layout .col-right, .col2-right-layout .col3-left-layout .main .col-right, .col3-left-layout .main .col2-right-layout .col-right, .col2-right-layout .col3-r-right-layout .main .col-r-right, .col3-r-right-layout .main .col2-right-layout .col-r-right {
-  width: 26.54867%;
+  width: 30%;
 }
 
 /* COL THREE LEFT LAYOUT*/
@@ -2784,40 +2818,6 @@ button {
 /* COLUMN THREE R RIGHT LAYOUT*/
 .col3-r-right-layout {
   width: 100%;
-}
-
-.width-wrapper {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-.left-width, .col2-left-layout .col-left, .col2-left-layout .col3-right-layout .main .col-left, .col3-right-layout .main .col2-left-layout .col-left, .col2-left-layout .col3-l-left-layout .main .col-l-left, .col3-l-left-layout .main .col2-left-layout .col-l-left, .col3-left-layout .col-left, .col3-left-layout .col3-right-layout .main .col-left, .col3-right-layout .main .col3-left-layout .col-left, .col3-left-layout .col3-l-left-layout .main .col-l-left, .col3-l-left-layout .main .col3-left-layout .col-l-left, .col3-l-left-layout .col-left, .col3-l-left-layout .col3-right-layout .main .col-left, .col3-right-layout .main .col3-l-left-layout .col-left, .col3-l-left-layout .main .col-l-left {
-  width: 26.54867%;
-}
-
-.main-width, .col3-left-layout .main, .col3-right-layout .main, .col3-l-left-layout .main, .col3-r-right-layout .main {
-  width: 71.68142%;
-}
-
-.right-width, .col3-right-layout .col-right, .col3-right-layout .col3-left-layout .main .col-right, .col3-left-layout .main .col3-right-layout .col-right, .col3-right-layout .col3-r-right-layout .main .col-r-right, .col3-r-right-layout .main .col3-right-layout .col-r-right, .col3-r-right-layout .col-right, .col3-r-right-layout .col3-left-layout .main .col-right, .col3-left-layout .main .col3-r-right-layout .col-right, .col3-r-right-layout .main .col-r-right {
-  width: 26.54867%;
-}
-
-/* INNER COL WIDTH*/
-.col-left, .col3-right-layout .main .col-left, .col3-l-left-layout .main .col-l-left {
-  width: 37.03704%;
-}
-
-.col-main, .col3-left-layout .main .col-main, .col3-right-layout .main .col-main, .col3-l-left-layout .main .col-main, .col3-r-right-layout .main .col-main {
-  width: 60.49383%;
-}
-
-.col-right, .col3-left-layout .main .col-right, .col3-r-right-layout .main .col-r-right {
-  width: 37.03704%;
-}
-
-.content {
-  padding: 15px;
 }
 
 ::-webkit-input-placeholder,
@@ -3148,14 +3148,15 @@ footer {
   left: 0;
 }
 
-@media only screen and (max-width: 320px) {
-  .login-box {
-    max-width: 280px;
+@media only screen and (max-width: 992px) {
+  .logo h1 {
+    width: 230px;
   }
 }
 @media only screen and (max-width: 480px) {
   .login-box {
     max-width: 300px;
+    padding: 20px;
   }
 
   .logo {
@@ -3166,16 +3167,23 @@ footer {
     background-size: contain;
   }
 
+  .action-text {
+    text-align: center;
+  }
   .action-text .pull-left, .action-text .pull-right {
     float: none;
+  }
+  .action-text .pull-left {
+    margin-bottom: 15px;
+    display: block;
   }
 
   .or-option:after, .or-option:before {
     width: 75px;
   }
 }
-@media only screen and (max-width: 992px) {
-  .logo h1 {
-    width: 230px;
+@media only screen and (max-width: 320px) {
+  .login-box {
+    max-width: 280px;
   }
 }

@@ -19,6 +19,37 @@
 	max-width:$width-default;
 }
 
+.width-wrapper{
+	width:$width-wrapper;
+    margin: 0 auto;
+}
+
+.left-width{
+	width: $left-width;
+}
+.main-width{
+	width: $main-width;
+}
+.right-width{
+	width: $right-width;
+}
+
+/* INNER COL WIDTH*/
+.col-left{
+	width: $col-left;
+}
+
+.col-main{
+	width: $col-main;
+}
+.col-right{
+	width: $col-right;
+}
+
+.content {
+	padding: 15px;
+}
+
 /* COL ONE LAYOUT */
 .col1-layout{
 	width:$width-default;
@@ -136,36 +167,4 @@
 	.col-right{
 		@extend .float-right, .right-width;
 	}
-}
-
-
-.width-wrapper{
-	width:$width-wrapper;
-    margin: 0 auto;
-}
-
-.left-width{
-	width: $left-width;
-}
-.main-width{
-	width: $main-width;
-}
-.right-width{
-	width: $right-width;
-}
-
-/* INNER COL WIDTH*/
-.col-left{
-	width: $col-left;
-}
-
-.col-main{
-	width: $col-main;
-}
-.col-right{
-	width: $col-right;
-}
-
-.content {
-	padding: 15px;
 }
