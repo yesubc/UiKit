@@ -32,6 +32,7 @@ hr {
 a{
 	color: $global-gray;
 	text-decoration: none;
+	@include x-transition(all 0.3s ease-in-out);
 	&:hover, &:focus{
 		color: $global-green-hover;
 		text-decoration: underline;
@@ -49,34 +50,34 @@ h1,h2,h3,h4,h5,h6{
 	}
 
 h1 {
-  font-size: em(45);
+  font-size: 45px;
 }
 
 h2 {
 	font-weight: 200;
-	font-size: em(25);
+	font-size: 25px;
 	margin: 0;
-	padding-bottom: em(30);
+	padding-bottom: 30px;
 }
 
 h3 {
 	font-weight: 200;
-	font-size: em(18);
+	font-size: 18px;
 }
 
 h4 {
 	font-weight: 500;
-	font-size: em(16);
+	font-size: $base-font-size;
 }
 
 h5 {
 	font-weight: 900;
-	font-size: 0.8em;
+	font-size: 14px;
 }
 
 h6 {
 	font-weight: 900;
-	font-size: 0.6em;
+	font-size: 12px;
 	text-transform: uppercase;
 }
 
@@ -107,14 +108,14 @@ h6 {
 
 footer{
 	text-align:center;
-	font-size: em(12);
+	font-size: 12px;
 	@extend .after-pseudo;
 	margin: 30px 0;
 	}
 
 /*Login Box*/
 .home {
-	padding-top:em(50);
+	padding-top: 0px;
 	/*text-align: center;
 	height: 100%;
 		&:before {
@@ -122,7 +123,7 @@ footer{
 			display: inline-block;
 			height: 100%; 
 			vertical-align: middle;
-			margin-right: -0.25em;
+			margin-right: -40px;
 		 }
 		 .main{
 				display: inline-block;
@@ -130,10 +131,10 @@ footer{
 				padding: 0;
 			  }*/
 	}
-header.logo{
-	margin: 0 0 30px 0;
+.logo{
+	margin: 30px 0;
 		h1{
-			width: em(230);
+			width: 230px;
 			height:65px;
 			line-height:65px;
 			margin:0 auto;
@@ -147,48 +148,52 @@ header.logo{
 				}
 		}
 	}
+	
+.header-title{
+	text-transform:uppercase;
+	font-size:16px;
+	text-align:center;
+	margin-bottom:15px;
+	}
+	
 .login-box{
-	width: em(400);
-	padding: em(40);
+	width: 400px;
+	padding: 40px;
 	margin:0 auto;
 	background: $global-white;
 	border: 1px #dddddd solid;
 	/*box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);*/
-	h1{
-		text-transform:uppercase;
-		font-size:1em;
-		text-align:center;
-		margin-bottom:15px;
-		}
 		p{
 			position: relative;
 			margin-bottom:20px;
 			@extend .after-pseudo;
-			&:last-child{
-				margin: 0px;
-			}
 			label.fa{
 				text-indent: -9999px;
 				position: absolute;
-				cursor: pointer;
 				&:before{
 					position: absolute;
 					left: 10px;
 					top: 13px;
 					width: 30px;
-					font-size: 1em;
+					font-size: $base-font-size;
 					text-indent: 0;
 					color: $lightgray;
 				}
 			}
+			&:last-child{
+				margin-bottom: 0px;
+				}
+			input:not([type="checkbox"]){
+				padding-left: 32px;
+			}
 		}
 		.note{
-			font-size: em(14);
+			font-size: 14px;
 			color: $global-gray;
 			border-top: 1px #e5e5e5 solid;
-			padding-top: 15px;
-			margin-top: 15px;
-			overflow:hidden
+			padding-top: 20px;
+			margin-top: 20px;
+			@extend .after-pseudo;
 			}
 	}
 

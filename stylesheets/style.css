@@ -123,7 +123,7 @@ html {
 }
 
 ul, ol {
-  margin-left: 1em;
+  margin-left: 16px;
 }
 
 li {
@@ -273,7 +273,7 @@ button {
   zoom: 1;
 }
 
-.clearall, .after-pseudo, .main-wrapper, footer, .login-box p {
+.clearall, .after-pseudo, .main-wrapper, footer, .login-box p, .login-box .note {
   clear: both;
 }
 
@@ -2717,7 +2717,7 @@ button {
 
 /* LAYOUT*/
 .main-container {
-  max-width: 62.5em;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0;
 }
@@ -2787,7 +2787,7 @@ button {
 }
 
 .width-wrapper {
-  width: em(1000);
+  width: 1000px;
   margin: 0 auto;
 }
 
@@ -2830,9 +2830,9 @@ input:-moz-placeholder,
   color: #a2a2a2;
 }
 
-input[type="text"], input[type="password"], input[type="phone"], select, textarea {
+input:not([type="checkbox"]), select, textarea {
   color: #666666;
-  font: 1em "Proxima", "ProximaNova", "Proxima Nova", "Helvetica", Arial, sans-serif;
+  font: 16px "Proxima", "ProximaNova", "Proxima Nova", "Helvetica", Arial, sans-serif;
   border: 1px #cccccc solid;
   padding: 10px;
   background-color: white;
@@ -2852,23 +2852,20 @@ input[type="text"], input[type="password"], input[type="phone"], select, textare
   appearance: none;
 }
 
-input[type=text], input[type=password] {
-  padding: 10px 5px 10px 32px;
-}
-input[type=text]:hover, input[type=password]:hover {
+input:not([type="checkbox"]):hover, select:hover, textarea:hover {
   border-color: #b9b9b9;
 }
-input[type=text]:active, input[type=text]:focus, input[type=password]:active, input[type=password]:focus {
+input:not([type="checkbox"]):active, input:not([type="checkbox"]):focus, select:active, select:focus, textarea:active, textarea:focus {
   border-color: #099acb;
   /*background: rgba(238, 236, 240, 0.2);*/
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
-  -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3) inset;
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3) inset;
+  -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3) inset;
+  -ms-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3) inset;
 }
 
-input[type=text], input[type=password], button, input[type="submit"] {
+input:not([type="checkbox"]), button {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2881,15 +2878,16 @@ button, input[type='submit'], input[type='button'], a.button, .button {
   color: white;
   padding: 10px 20px;
   border: 1px transparent solid;
-  font: 1.125em "Proxima", "ProximaNova", "Proxima Nova", "Helvetica", Arial, sans-serif;
+  font: 18px "Proxima", "ProximaNova", "Proxima Nova", "Helvetica", Arial, sans-serif;
   cursor: pointer;
   text-transform: uppercase;
   text-shadow: 0 1px rgba(0, 0, 0, 0.15);
-  /*@include x-boxshadow(0 5px rgba(0,0,0,0.3));*/
-  box-shadow: inset 0 -2px rgba(255, 255, 255, 0.1), inset 0 -3px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.05);
+  /*@extend .roundedborder;
+  @include x-boxshadow(0 5px rgba(0,0,0,0.3));*/
 }
 button:hover, input[type='submit']:hover, input[type='button']:hover, a.button:hover, .button:hover {
   background: #4cb95b;
+  box-shadow: inset 0 -2px rgba(255, 255, 255, 0.1), inset 0 -3px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.05);
 }
 
 button::-moz-focus-inner,
@@ -2912,11 +2910,11 @@ input:focus:invalid {
 }
 
 .input-tiny {
-  width: 3.125em;
+  width: 50px;
 }
 
 .input-small {
-  width: 6.25em;
+  width: 100px;
   margin-right: 10px;
 }
 
@@ -2925,19 +2923,19 @@ input:focus:invalid {
 }
 
 .input-medium {
-  width: 9.375em;
+  width: 150px;
 }
 
 .input-arge {
-  width: 12.5em;
+  width: 200px;
 }
 
 .input-xlarge {
-  width: 15.625em;
+  width: 250px;
 }
 
 .input-xxlarge {
-  width: 18.75em;
+  width: 300px;
 }
 
 .input-full {
@@ -2973,6 +2971,11 @@ hr {
 a {
   color: #666666;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 a:hover, a:focus {
   color: #4cb95b;
@@ -2990,47 +2993,47 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.8125em;
+  font-size: 45px;
 }
 
 h2 {
   font-weight: 200;
-  font-size: 1.5625em;
+  font-size: 25px;
   margin: 0;
-  padding-bottom: 1.875em;
+  padding-bottom: 30px;
 }
 
 h3 {
   font-weight: 200;
-  font-size: 1.125em;
+  font-size: 18px;
 }
 
 h4 {
   font-weight: 500;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 h5 {
   font-weight: 900;
-  font-size: 0.8em;
+  font-size: 14px;
 }
 
 h6 {
   font-weight: 900;
-  font-size: 0.6em;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
-.after-pseudo, .main-wrapper, footer, .login-box p {
+.after-pseudo, .main-wrapper, footer, .login-box p, .login-box .note {
   content: "";
   overflow: hidden;
 }
 
-.dis-block, .after-pseudo, .main-wrapper, footer, .login-box p, header.logo h1 a {
+.dis-block, .after-pseudo, .main-wrapper, footer, .login-box p, .login-box .note, .logo h1 a {
   display: block;
 }
 
-.roundedborder, button, input[type='submit'], input[type='button'], a.button, .button {
+.roundedborder {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -3050,13 +3053,13 @@ h6 {
 
 footer {
   text-align: center;
-  font-size: 0.75em;
+  font-size: 12px;
   margin: 30px 0;
 }
 
 /*Login Box*/
 .home {
-  padding-top: 3.125em;
+  padding-top: 0px;
   /*text-align: center;
   height: 100%;
   	&:before {
@@ -3064,7 +3067,7 @@ footer {
   		display: inline-block;
   		height: 100%; 
   		vertical-align: middle;
-  		margin-right: -0.25em;
+  		margin-right: -40px;
   	 }
   	 .main{
   			display: inline-block;
@@ -3073,65 +3076,67 @@ footer {
   		  }*/
 }
 
-header.logo {
-  margin: 0 0 30px 0;
+.logo {
+  margin: 30px 0;
 }
-header.logo h1 {
-  width: 14.375em;
+.logo h1 {
+  width: 230px;
   height: 65px;
   line-height: 65px;
   margin: 0 auto;
   background: url(../images/logo-leapfrog-technology.png) no-repeat center;
 }
-header.logo h1 a {
+.logo h1 a {
   max-width: 100%;
   line-height: 65px;
   text-indent: -9999px;
   font-size: 0px;
 }
 
+.header-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .login-box {
-  width: 25em;
-  padding: 2.5em;
+  width: 400px;
+  padding: 40px;
   margin: 0 auto;
   background: white;
   border: 1px #dddddd solid;
   /*box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);*/
 }
-.login-box h1 {
-  text-transform: uppercase;
-  font-size: 1em;
-  text-align: center;
-  margin-bottom: 15px;
-}
 .login-box p {
   position: relative;
   margin-bottom: 20px;
 }
-.login-box p:last-child {
-  margin: 0px;
-}
 .login-box p label.fa {
   text-indent: -9999px;
   position: absolute;
-  cursor: pointer;
 }
 .login-box p label.fa:before {
   position: absolute;
   left: 10px;
   top: 13px;
   width: 30px;
-  font-size: 1em;
+  font-size: 16px;
   text-indent: 0;
   color: #cccccc;
 }
+.login-box p:last-child {
+  margin-bottom: 0px;
+}
+.login-box p input:not([type="checkbox"]) {
+  padding-left: 32px;
+}
 .login-box .note {
-  font-size: 0.875em;
+  font-size: 14px;
   color: #666666;
   border-top: 1px #e5e5e5 solid;
-  padding-top: 15px;
-  margin-top: 15px;
-  overflow: hidden;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 /*Option Header*/
@@ -3159,17 +3164,12 @@ header.logo h1 a {
 
 @media only screen and (max-width: 600px) {
   .main-container {
-    max-width: 95%;
+    max-width: 480px;
     margin: 0 auto;
   }
 
-  header.logo h1 {
-    width: 85%;
-  }
-
   .login-box {
-    width: 90%;
-    padding: 0.9375em;
+    padding: 20px;
   }
 
   .note {
@@ -3180,11 +3180,35 @@ header.logo h1 a {
     text-align: center;
   }
   .action-text .pull-left, .action-text .pull-right {
-    float: none;
-    width: 100%;
-    display: block;
+    display: inline-block;
   }
   .action-text .pull-left {
-    margin-bottom: 0.625em;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .login-box {
+    max-width: 300px;
+  }
+
+  .logo {
+    margin: 15px 0;
+  }
+  .logo h1 {
+    width: 180px;
+    background-size: contain;
+  }
+
+  .action-text .pull-left, .action-text .pull-right {
+    float: none;
+  }
+
+  .or-option:after, .or-option:before {
+    width: 75px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .login-box {
+    max-width: 280px;
   }
 }

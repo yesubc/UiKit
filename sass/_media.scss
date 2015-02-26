@@ -1,28 +1,51 @@
 @media only screen and (max-width: 600px){
 	.main-container {
-		max-width: 95%;
+		max-width: 480px;
 		margin: 0 auto;
 	}
-	header.logo{
-		h1{
-			width: 85%;
-		}
-	}
 	.login-box{
-		width: 90%;
-		padding: em(15);
+		padding: 20px;
 	}
 	.note{ text-align: center;}
 	.action-text{
 		text-align:center;
 		.pull-left,.pull-right{
-			float: none;
-			width: 100%;
-			display: block;
+			display: inline-block;
 		}
 		
 		.pull-left{
-			margin-bottom: em(10);
+			margin-bottom: 10px;
 			}
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.login-box{
+		max-width: 300px;
+	}
+	.logo{
+		margin: 15px 0;
+		h1{
+			width: 180px;
+			background-size: contain;
+		}
+	}
+	.action-text{
+		.pull-left,.pull-right{
+			float: none;
+		}
+	}
+	.or-option {
+		&:after, 
+		&:before {
+			width: 75px;   
+		}
+	}
+}
+
+
+@media only screen and (max-width: 320px){
+	.login-box{
+		max-width: 280px;
 	}
 }
