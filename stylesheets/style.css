@@ -3172,10 +3172,10 @@ footer {
   }
   .action-text .pull-left, .action-text .pull-right {
     float: none;
+    display: inline-block;
   }
   .action-text .pull-left {
     margin-bottom: 15px;
-    display: block;
   }
 
   .or-option:after, .or-option:before {

@@ -23,10 +23,10 @@
 		text-align:center;
 		.pull-left,.pull-right{
 			float: none;
+			display:inline-block;
 		}
 		.pull-left{
 			margin-bottom:15px;
-			display:block;
 			}
 	}
 	.or-option {
