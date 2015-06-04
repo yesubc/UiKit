@@ -3,9 +3,6 @@
 @import "reset";
 @import "font";
 @import "font-awesome";
-@import "layout";
-@import "form";
-@import "blocksets";
 
 html {
     font-size: $base-font-size;
@@ -98,9 +95,15 @@ h6 {
 .float-left{
 	float: $left;
 }
+
 .float-right{
 	float: $right;
 }
+
+
+@import "layout";
+@import "form";
+@import "blocksets";
 
 .padding{
 	padding: 20px 0;
